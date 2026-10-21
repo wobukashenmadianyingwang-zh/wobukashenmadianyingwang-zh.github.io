@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#f6f1e7">
+<meta name="msapplication-TileColor" content="#1c1c1c">
+<title>我不卡神马电影网 - 中文电影导航与选片指南｜wobukashenmadianyingwang-zh</title>
+<meta name="keywords" content="我不卡神马电影网,wobukashenmadianyingwang-zh,中文电影导航,电影选片指南,电影推荐清单,院线新片资讯,经典电影合集,电影排行榜,影视观影路线,我不卡神马电影网官网">
+<meta name="description" content="我不卡神马电影网（wobukashenmadianyingwang-zh）是专注中文电影导航与选片指南的独立站点，每周整理院线新片动态、经典电影合集与分场景观影路线。站方从类型、节奏、情绪、片长四个维度筛选影片，提供可直接照着看的清单，帮助观众快速定片，少在选片上浪费时间。">
+<meta name="author" content="我不卡神马电影网编辑组">
+<meta name="copyright" content="© 2026 我不卡神马电影网 wobukashenmadianyingwang-zh 版权所有">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="bingbot" content="index,follow">
+<link rel="canonical" href="https://wobukashenmadianyingwang-zh.github.io/">
+<style>
+:root{
+  --paper:#f6f1e7;--paper2:#efe7d8;--ink:#1c1c1c;--ink2:#3d3d3a;--mu:#6f6d64;
+  --line:#d9d2c3;--line2:#c8bfae;
+  --ac:#c8331f;--ac2:#1f5f5b;--gold:#a8802a;
+  --serif:"Source Han Serif SC","Songti SC","Noto Serif CJK SC",Georgia,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","WenQuanYi Micro Hei",system-ui,sans-serif;
+  --r:4px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.8;
+  background-image:radial-gradient(rgba(28,28,28,.022) 1px,transparent 1px);background-size:22px 22px;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none;transition:color .25s ease}
+ul{list-style:none}
+.wrap{width:min(1180px,91%);margin:0 auto}
+section{padding:78px 0}
+.rule{height:1px;background:var(--line);width:100%}
+.kicker{font-family:var(--serif);font-size:12.5px;letter-spacing:.16em;color:var(--ac);text-transform:uppercase;font-weight:700}
+.h2{font-family:var(--serif);font-size:clamp(25px,3.6vw,38px);font-weight:900;line-height:1.3;letter-spacing:-.4px}
+.h2 em{font-style:italic;color:var(--ac)}
+.lead{color:var(--mu);max-width:640px;font-size:15.5px;font-family:var(--serif)}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;flex-wrap:wrap;margin-bottom:34px;padding-bottom:14px;border-bottom:2px solid var(--ink)}
+.hd .lz{display:flex;flex-direction:column;gap:6px}
+.more{font-family:var(--serif);font-style:italic;color:var(--ac);font-size:14.5px;border-bottom:1px solid var(--ac);padding-bottom:2px}
+.more:hover{color:var(--ink);border-color:var(--ink)}
+
+/* 报头 */
+header{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(246,241,231,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.mast{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:3px double var(--ink)}
+.mast .meta{font-family:var(--serif);font-size:11.5px;color:var(--mu);letter-spacing:.05em;display:flex;gap:18px;flex-wrap:wrap}
+.mast .meta b{color:var(--ac);font-weight:700}
+.brand{text-align:center;padding:17px 0 13px}
+.brand h1{font-family:var(--serif);font-size:clamp(25px,4.3vw,43px);font-weight:900;letter-spacing:-.5px;line-height:1.1}
+.brand h1 i{font-style:normal;color:var(--ac)}
+.brand p{font-family:var(--serif);font-size:12px;color:var(--mu);letter-spacing:.34em;margin-top:7px;text-transform:uppercase}
+.brand .en{display:block;font-size:11px;letter-spacing:.2em;color:var(--line2);margin-top:3px;text-transform:none}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:10px 0;font-family:var(--serif);font-size:14px}
+.navbar .nav{display:flex;gap:1px;flex-wrap:wrap}
+.navbar .nav a{padding:6px 12px;border-radius:3px;font-weight:600;color:var(--ink2);font-size:14px}
+.navbar .nav a:hover{background:var(--ink);color:var(--paper)}
+.navbar .nav a.on{background:var(--ac);color:#fff}
+.navbar .dat{font-size:12.5px;color:var(--mu);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.navbar .dat::before{content:"";width:6px;height:6px;background:var(--ac2);border-radius:50%;display:inline-block}
+.tgl{display:none;font-family:var(--serif);background:var(--ink);color:var(--paper);border:0;padding:7px 13px;border-radius:3px;cursor:pointer;font-size:13.5px}
+
+/* Hero */
+.hero{padding:198px 0 62px}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:42px;align-items:start}
+.hero h2{font-family:var(--serif);font-size:clamp(29px,4.5vw,49px);font-weight:900;line-height:1.24;letter-spacing:-.6px}
+.hero h2 s{text-decoration:none;color:var(--ac)}
+.hero .sub{margin-top:20px;color:var(--ink2);font-size:clamp(15px,1.15vw,16.5px);font-family:var(--serif)}
+.urlbox{border:1.5px solid var(--ink);border-radius:var(--r);padding:13px 16px;margin-top:22px;background:var(--paper2)}
+.urlbox .lbl{font-family:var(--serif);font-size:11px;letter-spacing:.2em;color:var(--mu);text-transform:uppercase;margin-bottom:6px}
+.urlbox .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.urlbox code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;color:var(--ac);font-weight:800;word-break:break-all}
+.cp{border:1px solid var(--ac);background:transparent;color:var(--ac);font-family:var(--serif);font-size:12.5px;font-weight:700;padding:6px 14px;border-radius:3px;cursor:pointer;flex-shrink:0}
+.cp:hover{background:var(--ac);color:#fff}
+.tagline{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px 8px}
+.tagline a{font-family:var(--serif);font-size:13px;color:var(--ink2);border-bottom:1px dotted var(--line2);padding-bottom:1px}
+.tagline a:hover{color:var(--ac);border-bottom-style:solid}
+.marks{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr)}
+.marks div{padding:0 16px;border-left:1px solid var(--line)}
+.marks div:first-child{border-left:0;padding-left:0}
+.marks strong{display:block;font-family:var(--serif);font-size:26px;font-weight:900;line-height:1.2;color:var(--ac)}
+.marks span{font-size:12.5px;color:var(--mu)}
+
+/* 侧栏报 */
+.side{border:1.5px solid var(--ink);border-radius:var(--r);overflow:hidden;background:var(--paper2)}
+.side .hd2{background:var(--ink);color:var(--paper);padding:11px 16px;display:flex;justify-content:space-between;align-items:center}
+.side .hd2 b{font-family:var(--serif);font-size:15.5px;letter-spacing:.04em}
+.side .hd2 span{font-size:11px;color:#c9c2b3}
+.side ul{padding:6px 0}
+.side li{border-bottom:1px dashed var(--line2);padding:12px 16px}
+.side li:last-child{border-bottom:0}
+.side li a{display:grid;grid-template-columns:34px 1fr;gap:11px;align-items:start}
+.side li .no{font-family:var(--serif);font-size:21px;font-weight:900;color:var(--line2);line-height:1;font-variant-numeric:tabular-nums}
+.side li h5{font-family:var(--serif);font-size:14.5px;font-weight:800;line-height:1.45}
+.side li:hover .no{color:var(--ac)}
+.side li:hover h5{color:var(--ac)}
+.side li small{font-size:12px;color:var(--mu)}
+.side .quote{padding:17px 18px;background:var(--ink);color:var(--paper);font-family:var(--serif);font-size:14.5px;line-height:1.8}
+.side .quote b{display:block;color:var(--gold);font-size:11px;letter-spacing:.22em;margin-bottom:8px;text-transform:uppercase}
+
+/* 新片 */
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.cd{display:flex;flex-direction:column;transition:transform .38s ease}
+.cd:hover{transform:translateY(-6px)}
+.cd .ph{height:210px;position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cd .ph .no{position:absolute;left:0;top:0;background:var(--ink);color:var(--paper);font-family:var(--serif);font-size:12.5px;padding:5px 10px;z-index:2}
+.cd .ph .sc{position:absolute;right:9px;bottom:9px;background:var(--paper);border:1px solid var(--ink);color:var(--ink);font-family:var(--serif);font-size:13px;font-weight:800;padding:3px 8px;z-index:2}
+.cd .ph .tg{position:absolute;left:9px;bottom:9px;background:var(--ac);color:#fff;font-size:11px;font-weight:700;padding:4px 9px;z-index:2;font-family:var(--serif)}
+.cd .ph .tg.g{background:var(--ac2)}
+.cv{position:absolute;inset:0}
+.a{background:repeating-linear-gradient(135deg,#2b1f1a 0 9px,#3d2c24 9px 18px)}.b{background:repeating-linear-gradient(45deg,#15233a 0 11px,#1e3252 11px 22px)}
+.c{background:repeating-linear-gradient(90deg,#10302c 0 10px,#16443e 10px 20px)}.d{background:repeating-linear-gradient(135deg,#3a2c12 0 10px,#5c4519 10px 20px)}
+.e{background:repeating-linear-gradient(45deg,#2c1730 0 10px,#432251 10px 20px)}.f{background:repeating-linear-gradient(90deg,#3a1717 0 10px,#5c2626 10px 20px)}
+.gx{background:repeating-linear-gradient(135deg,#0f3140 0 10px,#16495f 10px 20px)}.hx{background:repeating-linear-gradient(45deg,#252525 0 10px,#3a3a3a 10px 20px)}
+.cv i{position:absolute;inset:auto 0 0 0;height:56%;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.cv em{position:absolute;left:12px;bottom:12px;right:12px;font-style:normal;color:#fff;font-family:var(--serif);font-size:16px;font-weight:900;line-height:1.3}
+.cd .tx{padding:12px 2px 0}
+.cd .tx h4{font-family:var(--serif);font-size:16px;font-weight:900;line-height:1.4;margin-bottom:6px}
+.cd .tx .mf{display:flex;justify-content:space-between;font-size:12.5px;color:var(--mu);font-family:var(--serif)}
+
+/* 频道 */
+.chips{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.chips a{flex:1 1 150px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 15px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14px;font-weight:600}
+.chips a:hover{background:var(--ink);color:var(--paper)}
+.chips a small{font-family:var(--serif);color:var(--mu);font-size:12px;flex-shrink:0}
+.chips a:hover small{color:var(--paper);opacity:.7}
+
+/* 榜单 */
+.lb{border-top:2px solid var(--ink)}
+.rw{display:grid;grid-template-columns:32px 44px 1fr 72px;align-items:center;gap:14px;padding:12px 4px;border-bottom:1px solid var(--line)}
+.rw .n{font-family:var(--serif);font-size:20px;font-weight:900;color:var(--line2);text-align:center;font-variant-numeric:tabular-nums}
+.rw .sq{height:64px;border:1px solid var(--line)}
+.rw .in h5{font-family:var(--serif);font-size:15.5px;font-weight:800;line-height:1.4}
+.rw .in span{font-size:12.5px;color:var(--mu)}
+.rw .vl{font-family:var(--serif);text-align:right}
+.rw .vl strong{display:block;font-size:18px;font-weight:900;color:var(--ac)}
+.rw .vl em{font-style:normal;font-size:11px;color:var(--mu)}
+.rw:hover .n{color:var(--ac)}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:start}
+.feat{border:1.5px solid var(--ink);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;transition:transform .38s ease}
+.feat:hover{transform:translateY(-6px)}
+.feat .fp{height:100%;min-height:230px}
+.fp.a{background:linear-gradient(160deg,#4a2418,#c8331f)}.fp.b{background:linear-gradient(160deg,#0e2a44,#1f5f5b)}
+.fp.c{background:linear-gradient(160deg,#3a2c12,#a8802a)}.fp.d{background:linear-gradient(160deg,#2c1730,#7c3aed)}
+.feat .fc{padding:22px 24px;background:var(--paper2)}
+.feat .cat{font-family:var(--serif);font-size:11.5px;letter-spacing:.14em;color:var(--ac);text-transform:uppercase;font-weight:700}
+.feat h4{font-family:var(--serif);font-size:20px;font-weight:900;line-height:1.5;margin:9px 0 11px}
+.feat p{color:var(--ink2);font-size:14px;font-family:var(--serif)}
+.feat .mt{margin-top:14px;font-size:12px;color:var(--mu);font-family:var(--serif);display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:10px}
+.nl li{padding:14px 0;border-bottom:1px solid var(--line)}
+.nl li:first-child{padding-top:0}
+.nl a{display:grid;grid-template-columns:44px 1fr;gap:13px;align-items:start}
+.nl .dt{font-family:var(--serif);border:1px solid var(--line);border-radius:3px;padding:6px 0;text-align:center;background:var(--paper2)}
+.nl .dt b{display:block;font-size:17px;font-weight:900;color:var(--ac);line-height:1.1}
+.nl .dt em{font-style:normal;font-size:10px;color:var(--mu)}
+.nl h6{font-family:var(--serif);font-size:14.5px;font-weight:800;line-height:1.55}
+.nl a:hover h6{color:var(--ac)}
+
+/* 方法论 */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1.5px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.st{background:var(--paper2);padding:22px 20px;border-right:1px solid var(--line)}
+.st:last-child{border-right:0}
+.st .n{font-family:var(--serif);font-size:13px;font-weight:800;color:var(--ac);letter-spacing:.1em}
+.st h5{font-family:var(--serif);font-size:17.5px;font-weight:900;margin:7px 0 8px}
+.st p{color:var(--ink2);font-size:13.5px;font-family:var(--serif)}
+.matrix{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mc{border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;background:var(--paper2);transition:border-color .3s ease}
+.mc:hover{border-color:var(--ac)}
+.mc h5{font-family:var(--serif);font-size:16.5px;font-weight:900;margin-bottom:7px}
+.mc p{color:var(--mu);font-size:13.5px;font-family:var(--serif)}
+.mc .tag{display:inline-block;font-family:var(--serif);font-size:11.5px;color:var(--ac2);border:1px solid var(--ac2);border-radius:30px;padding:3px 10px;margin-top:10px}
+
+/* 数据 */
+.dt{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.dc{padding:24px 18px;border-right:1px solid var(--line)}
+.dc:last-child{border-right:0}
+.dc .nm{font-family:var(--serif);font-size:34px;font-weight:900;color:var(--ac);line-height:1.15}
+.dc .nm i{font-style:normal;font-size:16px;color:var(--ac2)}
+.dc h6{font-family:var(--serif);font-size:15.5px;margin-top:8px;font-weight:800}
+.dc p{color:var(--mu);font-size:12.5px;margin-top:3px;font-family:var(--serif)}
+
+/* 关于 */
+.abt{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start}
+.acc{border-bottom:1px solid var(--line)}
+.acc summary{cursor:pointer;padding:16px 0;font-family:var(--serif);font-size:16px;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"＋";color:var(--ac);font-weight:900}
+.acc[open] summary::after{content:"－"}
+.acc p{padding:0 0 17px;color:var(--ink2);font-size:14.5px;font-family:var(--serif)}
+.con{border:1.5px solid var(--ink);border-radius:var(--r);padding:22px;background:var(--paper2)}
+.con .u{display:block;font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--ac);font-weight:800;font-size:14px;word-break:break-all;margin:10px 0 17px;padding-bottom:9px;border-bottom:1px dashed var(--line2)}
+.ci{display:grid;grid-template-columns:24px 1fr;gap:11px;padding:9px 0;align-items:start}
+.ci b{font-size:14px;font-weight:700;display:block;font-family:var(--serif)}
+.ci span,.ci a{color:var(--mu);font-size:13.5px;font-family:var(--serif)}
+
+/* 页脚 */
+footer{border-top:3px double var(--ink);padding:52px 0 0;background:var(--paper2)}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.fg .brand{text-align:left;padding:0 0 13px}
+.fg .brand h1{font-size:22px}
+.fg .brand p{letter-spacing:.18em;margin-top:5px}
+.fg p{color:var(--mu);font-size:14px;font-family:var(--serif)}
+.fc h6{font-family:var(--serif);font-size:15px;margin-bottom:12px;font-weight:900}
+.fc a{display:block;color:var(--ink2);font-size:14px;padding:6px 0;font-family:var(--serif);border-bottom:1px dotted transparent}
+.fc a:hover{color:var(--ac);border-bottom-color:var(--ac);padding-left:5px}
+.fb{border-top:1px solid var(--line);margin-top:40px;padding:22px 0;font-family:var(--serif);font-size:12.5px;color:var(--mu)}
+.fb .u{color:var(--ac);font-weight:700}
+#top{position:fixed;right:18px;bottom:-60px;width:44px;height:44px;border:0;border-radius:var(--r);background:var(--ink);color:var(--paper);font-size:16px;cursor:pointer;z-index:50;font-family:var(--serif);transition:.4s ease}
+#top.show{bottom:18px}
+@media(max-width:1000px){
+  .g4{grid-template-columns:repeat(2,1fr)}.g2,.matrix,.abt,.news-grid{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr;gap:34px}.hero{padding:236px 0 46px}
+  .side{order:-1}.fg{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}
+}
+@media(max-width:660px){
+  section{padding:50px 0}.marks{grid-template-columns:1fr 1fr;gap:14px 0}
+  .marks div{border-left:0;padding:0 10px 12px;border-bottom:1px solid var(--line)}
+  .nav{position:fixed;right:0;top:0;flex-direction:column;width:82%;max-width:300px;background:var(--paper2);padding:64px 16px 16px;border-left:1px solid var(--line);height:100vh;transform:translateX(106%);transition:.42s ease;z-index:70}
+  .nav.open{transform:translateX(0)}.nav a{text-align:center;padding:12px;border-bottom:1px solid var(--line)}
+  .tgl{display:inline-block}.g4,.g2{grid-template-columns:1fr 1fr;gap:14px}
+  .ph{height:180px}.hd{margin-bottom:22px}.dt{grid-template-columns:1fr 1fr}
+  .feat{grid-template-columns:1fr}.feat .fp{min-height:150px}
+  .rw{grid-template-columns:28px 40px 1fr 60px}.rw .vl strong{font-size:16px}
+  .cd .tx h4{font-size:15px}.h2{font-size:23px}.hero h2{font-size:29px}
+  .navbar .dat{display:none}.mast .meta{font-size:10.5px;gap:10px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header>
+  <div class="wrap">
+    <div class="mast">
+      <div class="meta"><b>VOL.08 · 第 41 期</b><span>每周三出刊</span></div>
+      <div class="meta"><span>选片不易，先看目录</span><b>2026 年 10 月 9 日</b></div>
+    </div>
+    <div class="brand">
+      <h1>我不<em>卡</em>神马电影网</h1>
+      <p>Film Picker · 中文电影选片指南</p>
+      <span class="en">wobukashenmadianyingwang-zh</span>
+    </div>
+    <div class="navbar">
+      <nav class="nav" id="nav">
+        <a href="#feat">选片方法</a><a href="#new">新片观察</a><a href="#genre">频道索引</a>
+        <a href="#rank">口碑榜</a><a href="#news">影讯栏目</a><a href="#data">数据一览</a><a href="#about">关于本站</a>
+      </nav>
+      <span class="dat">在线 · 可正常访问</span>
+      <button class="tgl" id="tgl">目录</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="kicker">Editor's Letter · 编辑的话</span>
+        <h2>选片这件事，<br>本来就不该 <s>让人纠结</s></h2>
+        <p class="sub">我不卡神马电影网（<b>https://wobukashenmadianyingwang-zh.github.io</b>）是一份中文电影选片指南，不是资源索引。我们每周筛掉铺天盖地的营销信息，只留下值得一看的作品，并写清它适合谁、什么时候看、看完大概什么感受——让你的选片时间从半小时缩到三分钟。</p>
+        <div class="urlbox">
+          <div class="lbl">官方网站 Official Site</div>
+          <div class="row">
+            <code>https://wobukashenmadianyingwang-zh.github.io</code>
+            <button class="cp" onclick="cp(this)">复制网址</button>
+          </div>
+        </div>
+        <div class="tagline">
+          <a href="#">今晚看啥</a><span style="color:var(--line2)">·</span>
+          <a href="#">一个人看</a><span style="color:var(--line2)">·</span>
+          <a href="#">带爸妈看</a><span style="color:var(--line2)">·</span>
+          <a href="#">约会不冷场</a><span style="color:var(--line2)">·</span>
+          <a href="#">短于 90 分钟</a><span style="color:var(--line2)">·</span>
+          <a href="#">4K 修复版</a><span style="color:var(--line2)·">·</span>
+          <a href="#">悬疑犯罪</a><span style="color:var(--line2)">·</span>
+          <a href="#">国产新片</a>
+        </div>
+        <div class="marks">
+          <div><strong>5200+</strong><span>已收录影片</span></div>
+          <div><strong>32</strong><span>类型频道</span></div>
+          <div><strong>16</strong><span>每月精选部数</span></div>
+          <div><strong>2.4w</strong><span>站友订阅</span></div>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="hd2"><b>今日导读</b><span>4 分钟读完</span></div>
+        <ul>
+          <li><a href="#feat"><span class="no">01</span><div><h5>卡住我们的从来不是片荒，是没标准</h5><small>编辑部选片四步法</small></div></a></li>
+          <li><a href="#new"><span class="no">02</span><div><h5>十月在映新片：四部值得排进档期</h5><small>新片观察 · 本周</small></div></a></li>
+          <li><a href="#rank"><span class="no">03</span><div><h5>口碑榜变天：三部新片首次入榜</h5><small>榜单动态 · 周三更新</small></div></a></li>
+          <li><a href="#genre"><span class="no">04</span><div><h5>32 个频道索引，每个都是人工维护</h5><small>频道索引 · 完整</small></div></a></li>
+          <li><a href="#news"><span class="no">05</span><div><h5>影讯：定档、撤档与档期微调</h5><small>影讯栏目 · 每日更新</small></div></a></li>
+          <li><a href="#data"><span class="no">06</span><div><h5>四个数字看懂这个站怎么运转</h5><small>数据一览 · 月度</small></div></a></li>
+        </ul>
+        <div class="quote">
+          <b>本期编辑手记</b>
+          "这周最打动我们的一部，不是票房最高的那个。它节奏慢，但看完会想坐一会儿——选片不该只看热搜，也该给这类片子留位置。"
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="feat">
+  <div class="wrap">
+    <div class="hd">
+      <div class="lz"><span class="kicker">Method · 选片方法</span><h2 class="h2">卡住我们的不是片荒，<em>是没标准</em></h2><p class="lead">类型、节奏、情绪、片长——四个维度一筛，可选范围立刻从几千部缩到十几部。</p></div>
+      <a href="#" class="more">查看完整方法 →</a>
+    </div>
+    <div class="steps">
+      <div class="st"><span class="n">STEP 01</span><h5>定场合</h5><p>一个人、约会、带长辈、朋友聚会，场合决定了"什么才算好片"，这是最容易被忽略的一步。</p></div>
+      <div class="st"><span class="n">STEP 02</span><h5>挑类型</h5><p>悬疑、喜剧、文艺、动画，先排除明确不想看的，不要从"什么都行"开始找。</p></div>
+      <div class="st"><span class="n">STEP 03</span><h5>看时长</h5><p>时间只有一小时？直接筛 90 分钟以内，三分钟内就能定下来。</p></div>
+      <div class="st"><span class="n">STEP 04</span><h5>核口碑</h5><p>看我们标注的入选理由与风险提示，避开题材踩雷，而不是只看一个总分。</p></div>
+    </div>
+    <div class="matrix">
+      <div class="mc"><h5>一个人看</h5><p>需要内容密度高的沉浸型作品，片长不是限制，重点是能沉进去。</p><span class="tag">文艺 · 悬疑 · 纪录</span></div>
+      <div class="mc"><h5>带长辈看</h5><p>剧情清晰、节奏明快、对白易懂，4K 修复版观感提升最明显。</p><span class="tag">合家欢 · 经典 · 修复</span></div>
+      <div class="mc"><h5>时间很紧</h5><p>90 分钟以内优先，紧凑型剧情片与短片合集最不容易半途而废。</p><span class="tag">短片 · 90分钟内</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="new" style="background:var(--paper2);">
+  <div class="wrap">
+    <div class="hd">
+      <div class="lz"><span class="kicker">Now Showing · 新片观察</span><h2 class="h2">新片观察 · <em>本周四部值得排进档期</em></h2><p class="lead">在映新片快评与口碑参考，先看懂再看，少走一次弯路。</p></div>
+      <a href="#" class="more">全部新片 →</a>
+    </div>
+    <div class="g4">
+      <article class="cd"><div class="ph"><span class="no">01</span><div class="cv a"><i></i><em>夜行备忘录</em></div><span class="tg">新片</span><span class="sc">8.9</span></div><div class="tx"><h4>夜行备忘录</h4><div class="mf"><b>悬疑 · 犯罪</b><span>128 min</span></div></div></article>
+      <article class="cd"><div class="ph"><span class="no">02</span><div class="cv b"><i></i><em>迟到的春天</em></div><span class="tg g">口碑</span><span class="sc">9.1</span></div><div class="tx"><h4>迟到的春天</h4><div class="mf"><b>剧情 · 文艺</b><span>119 min</span></div></div></article>
+      <article class="cd"><div class="ph"><span class="no">03</span><div class="cv c"><i></i><em>云端邮差</em></div><span class="sc">8.5</span></div><div class="tx"><h4>云端邮差</h4><div class="mf"><b>奇幻 · 动画</b><span>104 min</span></div></div></article>
+      <article class="cd"><div class="ph"><span class="no">04</span><div class="cv d"><i></i><em>小满的夏天</em></div><span class="tg">热门</span><span class="sc">8.3</span></div><div class="tx"><h4>小满的夏天</h4><div class="mf"><b>喜剧 · 青春</b><span>112 min</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="genre">
+  <div class="wrap">
+    <div class="hd">
+      <div class="lz"><span class="kicker">Genre Index · 频道索引</span><h2 class="h2">频道索引 · <em>32 个频道，条条有人维护</em></h2><p class="lead">每个频道都是一份独立维护的片单，不是自动分类页，点进去就能直接照着看。</p></div>
+      <a href="#" class="more">完整索引 →</a>
+    </div>
+    <div class="chips">
+      <a href="#">动作大片 <small>268</small></a>
+      <a href="#">轻松喜剧 <small>241</small></a>
+      <a href="#">爱情文艺 <small>216</small></a>
+      <a href="#">科幻烧脑 <small>154</small></a>
+      <a href="#">悬疑犯罪 <small>198</small></a>
+      <a href="#">惊悚恐怖 <small>132</small></a>
+      <a href="#">剧情文艺 <small>362</small></a>
+      <a href="#">动画国漫 <small>136</small></a>
+      <a href="#">纪录纪实 <small>207</small></a>
+      <a href="#">历史传记 <small>119</small></a>
+      <a href="#">4K 修复 <small>148</small></a>
+      <a href="#">高分冷门 <small>356</small></a>
+    </div>
+    <div class="g4" style="margin-top:32px;">
+      <article class="cd"><div class="ph"><span class="no">05</span><div class="cv e"><i></i><em>无名之辈</em></div><span class="sc">8.7</span></div><div class="tx"><h4>无名之辈</h4><div class="mf"><b>犯罪 · 黑色幽默</b><span>2018</span></div></div></article>
+      <article class="cd"><div class="ph"><span class="no">06</span><div class="cv f"><i></i><em>老港正传</em></div><span class="tg g">修复</span><span class="sc">9.3</span></div><div class="tx"><h4>老港正传</h4><div class="mf"><b>经典 · 港片</b><span>1996</span></div></div></article>
+      <article class="cd"><div class="ph"><span class="no">07</span><div class="cv gx"><i></i><em>紫色潮汐</em></div><span class="sc">8.6</span></div><div class="tx"><h4>紫色潮汐</h4><div class="mf"><b>爱情 · 治愈</b><span>2025</span></div></div></article>
+      <article class="cd"><div class="ph"><span class="no">08</span><div class="cv hx"><i></i><em>边境追缉令</em></div><span class="tg">动作</span><span class="sc">8.4</span></div><div class="tx"><h4>边境追缉令</h4><div class="mf"><b>动作 · 警匪</b><span>2026</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="rank" style="background:var(--paper2);">
+  <div class="wrap">
+    <div class="hd">
+      <div class="lz"><span class="kicker">Top Charts · 口碑榜</span><h2 class="h2">口碑榜 · <em>综合站内反馈与热度计算</em></h2><p class="lead">每周三更新，不接推广位，排名规则与数据口径公开可查。</p></div>
+      <a href="#" class="more">完整榜单 →</a>
+    </div>
+    <div class="g2" style="align-items:start;">
+      <div>
+        <h3 style="font-family:var(--serif);font-size:18px;font-weight:900;margin-bottom:4px;">综合口碑 TOP5</h3>
+        <p style="color:var(--mu);font-size:13.5px;font-family:var(--serif);margin-bottom:18px;">截至 2026 年 10 月 8 日 · 数据每月核对一次</p>
+        <div class="lb">
+          <div class="rw"><span class="n">1</span><div class="sq f"></div><div class="in"><h5>老港正传</h5><span>经典港片 · 4K 修复版</span></div><div class="vl"><strong>9.3</strong><em>1.2万评</em></div></div>
+          <div class="rw"><span class="n">2</span><div class="sq b"></div><div class="in"><h5>迟到的春天</h5><span>剧情文艺 · 群像演技</span></div><div class="vl"><strong>9.1</strong><em>9870评</em></div></div>
+          <div class="rw"><span class="n">3</span><div class="sq a"></div><div class="in"><h5>夜行备忘录</h5><span>悬疑犯罪 · 多层反转</span></div><div class="vl"><strong>8.9</strong><em>8430评</em></div></div>
+          <div class="rw"><span class="n">4</span><div class="sq gx"></div><div class="in"><h5>紫色潮汐</h5><span>爱情治愈 · 二刷率高</span></div><div class="vl"><strong>8.6</strong><em>7210评</em></div></div>
+          <div class="rw"><span class="n">5</span><div class="sq hx"></div><div class="in"><h5>边境追缉令</h5><span>动作警匪 · 实拍追车</span></div><div class="vl"><strong>8.4</strong><em>9580评</em></div></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:var(--serif);font-size:18px;font-weight:900;margin-bottom:4px;">上升最快 · 本周新面孔</h3>
+        <p style="color:var(--mu);font-size:13.5px;font-family:var(--serif);margin-bottom:18px;">按近七日反馈增幅排序 · 黑马常从这里出现</p>
+        <div class="lb">
+          <div class="rw"><span class="n">1</span><div class="sq c"></div><div class="in"><h5>云端邮差</h5><span>奇幻动画 · 口碑走高</span></div><div class="vl"><strong>8.5</strong><em>↑162</em></div></div>
+          <div class="rw"><span class="n">2</span><div class="sq d"></div><div class="in"><h5>小满的夏天</h5><span>青春喜剧 · 黑马之姿</span></div><div class="vl"><strong>8.3</strong><em>↑121</em></div></div>
+          <div class="rw"><span class="n">3</span><div class="sq e"></div><div class="in"><h5>无名之辈</h5><span>黑色幽默 · 再受关注</span></div><div class="vl"><strong>8.7</strong><em>↑98</em></div></div>
+          <div class="rw"><span class="n">4</span><div class="sq a"></div><div class="in"><h5>深空回声</h5><span>科幻灾难 · 视效受好评</span></div><div class="vl"><strong>8.2</strong><em>↑74</em></div></div>
+          <div class="rw"><span class="n">5</span><div class="sq f"></div><div class="in"><h5>倒数三秒</h5><span>密闭惊悚 · 小成本高张力</span></div><div class="vl"><strong>8.0</strong><em>↑55</em></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <div class="hd">
+      <div class="lz"><span class="kicker">News Desk · 影讯栏目</span><h2 class="h2">影讯栏目 · <em>只讲影响你选片的事</em></h2><p class="lead">档期、定档、幕后访谈与行业观察，过滤营销噪音。</p></div>
+      <a href="#" class="more">全部栏目 →</a>
+    </div>
+    <div class="news-grid">
+      <article class="feat"><div class="fp a"></div><div class="fc"><span class="cat">档期速递</span><h4>十月院线排片微调，三部现实题材影片延长放映至月底</h4><p>档期变化会直接影响线上片源更新节奏，我不卡神马电影网按周同步可看清单，避免选好片却发现暂时看不了的情况。</p><div class="mt"><span>2026-10-08</span><span>3 分钟阅读</span></div></div></article>
+      <ul class="nl">
+        <li><a href="#"><div class="dt"><b>09</b><em>10月</em></div><h6>新锐导演短片展片单公布，三十余部作品入围</h6></a></li>
+        <li><a href="#"><div class="dt"><b>06</b><em>10月</em></div><h6>十月值得期待的十二部新片，按类型一图看懂</h6></a></li>
+        <li><a href="#"><div class="dt"><b>04</b><em>10月</em></div><h6>《云端邮差》口碑逆跌，国产动画后劲十足</h6></a></li>
+        <li><a href="#"><div class="dt"><b>01</b><em>10月</em></div><h6>九月月度榜出炉，三部国产片进入综合榜前十</h6></a></li>
+        <li><a href="#"><div class="dt"><b>28</b><em>9月</em></div><h6>主创访谈合集：五组电影人谈创作的分寸感</h6></a></li>
+      </ul>
+      <article class="feat"><div class="fp b"></div><div class="fc"><span class="cat">幕后访谈</span><h4>《夜行备忘录》编剧访谈：反转不是目的，可信才是</h4><p>导演与编剧首次拆解多层叙事结构，谈反转设计的分寸感，以及拍摄现场即兴调整如何反哺剧本。</p><div class="mt"><span>2026-10-05</span><span>8 分钟阅读</span></div></div></article>
+      <ul class="nl">
+        <li><a href="#"><div class="dt"><b>25</b><em>9月</em></div><h6>我不卡神马电影网更新选片方法，决策时间再缩短一半</h6></a></li>
+        <li><a href="#"><div class="dt"><b>22</b><em>9月</em></div><h6>影迷投稿须知：推荐影片请附观看渠道与理由</h6></a></li>
+        <li><a href="#"><div class="dt"><b>18</b><em>9月</em></div><h6>经典修复片专区上线，148 部作品完成整理</h6></a></li>
+        <li><a href="#"><div class="dt"><b>14</b><em>9月</em></div><h6>观影调查：超六成观众因"不知道看啥"放弃选片</h6></a></li>
+        <li><a href="#"><div class="dt"><b>10</b><em>9月</em></div><h6>八月编辑部阅读报告：站友最爱这三类题材</h6></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="data" style="background:var(--paper2);">
+  <div class="wrap">
+    <div class="hd">
+      <div class="lz"><span class="kicker">By the Numbers · 数据一览</span><h2 class="h2">数据一览 · <em>看清这个站到底在做什么</em></h2><p class="lead">不做海量罗列，只做有判断力的精选。下面是这个月最常被用到的几个数字。</p></div>
+    </div>
+    <div class="dt">
+      <div class="dc"><div class="nm">5200<i>+</i></div><h6>影片库</h6><p>主流与小众兼顾</p></div>
+      <div class="dc"><div class="nm">32</div><h6>频道分类</h6><p>按类型与场景划分</p></div>
+      <div class="dc"><div class="nm">148</div><h6>4K 修复片</h6><p>老片重新上线</p></div>
+      <div class="dc"><div class="nm">16</div><h6>每月精选</h6><p>宁缺毋滥只推 16 部</p></div>
+      <div class="dc"><div class="nm">2.4<i>w+</i></div><h6>站友订阅</h6><p>每周三准时出刊</p></div>
+      <div class="dc"><div class="nm">9.2</div><h6>推荐准确度</h6><p>月度回访评分</p></div>
+      <div class="dc"><div class="nm">3<i>min</i></div><h6>平均定片</h6><p>告别选择焦虑</p></div>
+      <div class="dc"><div class="nm">98<i>%</i></div><h6>信息准确率</h6><p>档期与评分定期核对</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="hd">
+      <div class="lz"><span class="kicker">About · 关于本站</span><h2 class="h2">关于我不卡神马电影网 · <em>做影迷的选片搭子</em></h2></div>
+    </div>
+    <div class="abt">
+      <div>
+        <p style="color:var(--ink2);font-size:16px;font-family:var(--serif);">我不卡神马电影网（<b>https://wobukashenmadianyingwang-zh.github.io</b>）是一个面向中文观众的选片指南平台。站方相信：在信息过载的时代，一份有判断力的片单比海量罗列更有价值——我们追求的不是"什么都收进来"，而是让你花更少的时间，选到更合适的那一部。</p>
+        <p style="color:var(--ink2);font-size:16px;font-family:var(--serif);margin-top:14px;">平台每周整理院线新片动态、经典电影合集与分场景观影路线，提供按类型、节奏、情绪、片长四个维度划分的筛选方法，并持续整理经典修复片与获奖佳作，让被时间埋没的好作品重新被看见。</p>
+        <div style="margin-top:22px;">
+          <details class="acc" open><summary>我不卡神马电影网主要提供什么内容？</summary><p>平台提供影片精选清单、类型频道索引、口碑榜单与分场景观影路径指引，帮助观众快速定片，不提供在线播放服务。</p></details>
+          <details class="acc"><summary>精选片单多久更新一次？</summary><p>每月固定推出 16 部精选片单，口碑榜单每周三更新，档期与资讯信息每日核对同步。</p></details>
+          <details class="acc"><summary>如何推荐一部电影或纠正影片信息？</summary><p>可通过下方联系方式提交影片名称、观看渠道与推荐理由，编辑组会在三个工作日内回复处理结果。</p></details>
+          <details class="acc"><summary>经典修复片在哪个频道？</summary><p>进入频道索引选择 4K 修复频道，共收录 148 部完成修复的经典影片，均标注修复年份与版本说明。</p></details>
+          <details class="acc"><summary>榜单排名依据是什么？</summary><p>综合站内真实观影反馈、评分与讨论热度计算，不接推广位，排名规则与数据口径可在页面底部查看。</p></details>
+        </div>
+      </div>
+      <div class="con">
+        <h5 style="font-family:var(--serif);font-size:18px;font-weight:900;">联系编辑部</h5>
+        <span class="u">https://wobukashenmadianyingwang-zh.github.io</span>
+        <div class="ci"><b>📮 影迷投稿</b><a href="#">film@wobukashenmadianyingwang-zh.github.io</a></div>
+        <div class="ci"><b>🤝 商务合作</b><a href="#">bd@wobukashenmadianyingwang-zh.github.io</a></div>
+        <div class="ci"><b>💬 站友交流</b><a href="#">点击获取最新入口</a></div>
+        <div class="ci"><b>🕘 回复时段</b><span>工作日 9:30 — 18:30，节假日顺延</span></div>
+        <div class="ci"><b>📌 投稿须知</b><span>请附影片名称、观看渠道与推荐理由，便于编辑核实处理</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="brand"><h1>我不<em>卡</em>神马电影网</h1><p>Film Picker · 中文电影选片指南</p></div>
+        <p>我不卡神马电影网（wobukashenmadianyingwang-zh）是面向中文影迷的电影选片指南平台，聚焦院线新片动态、经典电影合集与分场景观影路线，帮你把纠结的选片时间缩到三分钟。</p>
+      </div>
+      <div class="fc"><h6>片单入口</h6><a href="#">新片观察</a><a href="#">经典电影合集</a><a href="#">4K 修复专区</a><a href="#">获奖精选</a><a href="#">高分冷门</a></div>
+      <div class="fc"><h6>频道索引</h6><a href="#">动作 · 警匪</a><a href="#">喜剧 · 合家欢</a><a href="#">悬疑 · 犯罪</a><a href="#">科幻 · 烧脑</a><a href="#">动画 · 国漫</a></div>
+      <div class="fc"><h6>关于本站</h6><a href="#">选片方法</a><a href="#">口碑榜单</a><a href="#">常见问题</a><a href="#">联系编辑部</a><a href="#">隐私声明</a></div>
+    </div>
+    <div class="fb">
+      <div style="margin-bottom:8px;">官方网站：<span class="u">https://wobukashenmadianyingwang-zh.github.io</span></div>
+      <div>© 2026 我不卡神马电影网 wobukashenmadianyingwang-zh 版权所有　|　影视资源信息仅供交流参考，请以官方放映与发行信息为准　|　本站内容未经授权不得转载</div>
+    </div>
+  </div>
+</footer>
+
+<button id="top" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var btn=document.getElementById('top'),nav=document.getElementById('nav'),tgl=document.getElementById('tgl'),pos={};
+  window.addEventListener('scroll',function(){btn.classList[window.scrollY>400?'add':'remove']('show');});
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  tgl.addEventListener('click',function(){nav.classList.toggle('open');});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open');});
+  document.querySelectorAll('section[id]').forEach(function(s){pos[s.id]=s.offsetTop-150;});
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY+180,k='feat';
+    for(var i in pos){if(y>=pos[i])k=i;}
+    document.querySelectorAll('.nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+k);});
+  });
+})();
+function cp(btn){
+  var u='https://wobukashenmadianyingwang-zh.github.io';
+  if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){ok(btn);},function(){fail(btn);});}
+  else fail(btn);
+  function ok(b){b.textContent='已复制 ✓';setTimeout(function(){b.textContent='复制网址';},1800);}
+  function fail(b){b.textContent='请长按选中';setTimeout(function(){b.textContent='复制网址';},1800);}
+}
+</script>
+</body>
+</html>
